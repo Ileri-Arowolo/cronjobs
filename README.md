@@ -13,7 +13,8 @@ sudo chmod +x /usr/local/bin/script.sh
 sudo crontab -e
 
 Add the following line to run the script every day at 1 AM:
-Copy0 1 * * * /usr/local/bin/script.sh
+
+0 1 * * * /usr/local/bin/script.sh
 
 
 This setup will run every day at 1 AM.
