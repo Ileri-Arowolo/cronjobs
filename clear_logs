@@ -1,0 +1,14 @@
+#!/bin/bash
+
+   # Set the directory where your logs are stored
+   LOG_DIR="/var/log"
+
+   # Find and delete files older than 14 days
+   find $LOG_DIR -type f -mtime +14 -delete
+
+   # Optional: Find and delete empty directories
+   find $LOG_DIR -type d -empty -delete
+
+   # Optional: Log the cleanup operation
+   echo "Log cleanup performed on $(date)" >> /var/log/cleanup_logs.log
+ 
